@@ -47,7 +47,6 @@ def index():
 @app.route("/register", methods=("POST", "GET"))
 def register():
     if request.method == "POST":
-        # здесь должна быть проверка корректности введенных данных
         try:
             hash = generate_password_hash(request.form['psw'])
             u = Users(email=request.form['email'], psw=hash)
