@@ -34,12 +34,6 @@ class Profile(db.Model):
 
 @app.route("/")
 def index():
-    # info = []
-    # try:
-    #     info = Users.query.all()
-    # except:
-    #     print("Ошибка чтения из БД")
-
     return render_template("index.html", title="Главная")
 
 
