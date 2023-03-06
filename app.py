@@ -34,7 +34,7 @@ class Profile(db.Model):
 
 @app.route("/")
 def index():
-    return render_template("index.html", title="Главная")
+    return render_template("index.html", title="Main")
 
 
 
@@ -53,11 +53,11 @@ def register():
             db.session.commit()
         except:
             db.session.rollback()
-            print("Ошибка добавления в БД")
+            print("Error")
 
         return redirect(url_for('index'))
 
-    return render_template("register.html", title="Регистрация")
+    return render_template("register.html", title="Registration")
 
 
 if __name__ == "__main__":
